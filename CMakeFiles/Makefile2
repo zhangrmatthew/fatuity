@@ -63,16 +63,57 @@ CMAKE_BINARY_DIR = /Users/matthewzhang/fatuity
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all:
+all: Concurrency/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: Concurrency/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean:
+clean: Concurrency/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory Concurrency
+
+# Recursive "all" directory target.
+Concurrency/all: Concurrency/CMakeFiles/Concurrency.dir/all
+.PHONY : Concurrency/all
+
+# Recursive "preinstall" directory target.
+Concurrency/preinstall:
+.PHONY : Concurrency/preinstall
+
+# Recursive "clean" directory target.
+Concurrency/clean: Concurrency/CMakeFiles/Concurrency.dir/clean
+.PHONY : Concurrency/clean
+
+#=============================================================================
+# Target rules for target Concurrency/CMakeFiles/Concurrency.dir
+
+# All Build rule for target.
+Concurrency/CMakeFiles/Concurrency.dir/all:
+	$(MAKE) $(MAKESILENT) -f Concurrency/CMakeFiles/Concurrency.dir/build.make Concurrency/CMakeFiles/Concurrency.dir/depend
+	$(MAKE) $(MAKESILENT) -f Concurrency/CMakeFiles/Concurrency.dir/build.make Concurrency/CMakeFiles/Concurrency.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/matthewzhang/fatuity/CMakeFiles --progress-num=1,2 "Built target Concurrency"
+.PHONY : Concurrency/CMakeFiles/Concurrency.dir/all
+
+# Build rule for subdir invocation for target.
+Concurrency/CMakeFiles/Concurrency.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/matthewzhang/fatuity/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Concurrency/CMakeFiles/Concurrency.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/matthewzhang/fatuity/CMakeFiles 0
+.PHONY : Concurrency/CMakeFiles/Concurrency.dir/rule
+
+# Convenience name for target.
+Concurrency: Concurrency/CMakeFiles/Concurrency.dir/rule
+.PHONY : Concurrency
+
+# clean rule for target.
+Concurrency/CMakeFiles/Concurrency.dir/clean:
+	$(MAKE) $(MAKESILENT) -f Concurrency/CMakeFiles/Concurrency.dir/build.make Concurrency/CMakeFiles/Concurrency.dir/clean
+.PHONY : Concurrency/CMakeFiles/Concurrency.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
