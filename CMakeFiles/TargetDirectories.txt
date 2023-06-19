@@ -1,0 +1,2 @@
+/Users/matthewzhang/fatuity/CMakeFiles/edit_cache.dir
+/Users/matthewzhang/fatuity/CMakeFiles/rebuild_cache.dir
